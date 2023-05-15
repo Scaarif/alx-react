@@ -1,9 +1,9 @@
-import "./body.css";
-const $ = require("jquery");
-const _ = require("lodash");
+import './body.css';
+const $ = require('jquery');
+const _ = require('lodash');
 
-$("body").append("<button>Click here to get started</button>");
-$("body").append('<p id="count"><p>');
+$('body').append('<button>Click here to get started</button>');
+$('body').append('<p id="count"><p>');
 
 const updateCounter = () => {
   let times = $("#count").html() || 0;
