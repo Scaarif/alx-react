@@ -3,12 +3,6 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-	plugins: [
-		new HTMLWebpackPlugin({
-			filename: './index.html',
-		}),
-		new CleanWebpackPlugin(),
-		],
 	devtool: 'inline-source-map',
 	mode: 'development',
 	entry: {
@@ -42,27 +36,33 @@ module.exports = {
 	},
 	performance: {
 		maxAssetSize: 1000000,
-	},  
-  module: {
-	rules: [
-		{
-			test: /\.css$/i,
-			use: ["css-loader", "style-loader"],
-		},
-		{
-			test: /\.(?:ico|gif|png|jpe?g|svg)$/i,
-			type: 'asset/resource',
-			use: [
-				"file-loader",
-				{
-					loader: "image-webpack-loader",
-					options: {
-							bypassingOnDebug: true,
-							disable: true,
+	},
+	plugins: [
+		new HTMLWebpackPlugin({
+			filename: './index.html',
+		}),
+		new CleanWebpackPlugin(),
+		],
+	module: {
+		rules: [
+			{
+				test: /\.css$/i,
+				use: ["css-loader", "style-loader"],
+			},
+			{
+				test: /\.(?:ico|gif|png|jpe?g|svg)$/i,
+				type: 'asset/resource',
+				use: [
+					"file-loader",
+					{
+						loader: "image-webpack-loader",
+						options: {
+								bypassingOnDebug: true,
+								disable: true,
+						},
 					},
-				},
-			],
-		},
-	],
-},
+				],
+			},
+		],
+	},
 };
