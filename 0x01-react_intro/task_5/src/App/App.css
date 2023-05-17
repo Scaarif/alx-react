@@ -1,0 +1,32 @@
+.App {
+  display: flex;
+  /* border: 1px solid red; */
+  flex-direction: column;
+  height: 100vh;
+  margin: 0 2rem;
+}
+.App-header {
+  display: flex;
+  align-items: center;
+  color: rgb(225, 67, 67);
+}
+.App-body {
+  border-bottom: 3px solid rgb(225, 67, 67);;
+  border-top: 3px solid rgb(225, 67, 67);;
+  height: 80%;
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+label {
+  text-transform: capitalize;
+  padding-right: 1rem;
+}
+input {
+  margin-right: 1rem;
+}
+.App-footer {
+  text-align: center;
+}
+.App-footer p {
+  /* font-style: italic; */
+}
