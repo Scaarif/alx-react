@@ -1,0 +1,2 @@
+.App{display:flex;flex-direction:column;height:100vh;margin:0 2rem}.App-header{align-items:center;color:#e14343;display:flex}.App-body{border-bottom:3px solid #e14343;border-top:3px solid #e14343;height:80%;padding-left:3rem;padding-top:2rem}label{padding-right:1rem;text-transform:capitalize}input{margin-right:1rem}.App-footer{text-align:center}.Notifications{border:2px dashed #e0354b;padding:1rem}ul li[data=default]{color:blue}ul li[data=urgent]{color:red}
+/*# sourceMappingURL=main.b8124452.css.map*/
