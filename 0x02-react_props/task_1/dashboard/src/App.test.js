@@ -12,7 +12,6 @@ verify that App renders a div with the class App-footer
 describe(App, () => {
     it("app renders without crashing", () => {
         render(<App/>)
-        screen.debug()
         const headerElem = screen.getByRole("heading", {name: "School dashboard"})
         expect(headerElem).toBeInTheDocument()
     })
