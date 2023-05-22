@@ -1,5 +1,5 @@
-import React from 'react'
-import logo from '../assets/logo.jpg';
+import React from 'react';
+import logoImg from '../assets/logo.jpg';
 import './App.css';
 import { getFooterCopy, getFullYear } from '../utils/utils';
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <img src={logo} alt='logo' height={200}></img>
+        <img src={logoImg} alt='logo' height={200} />
         <h1>School dashboard</h1>
       </div>
       <div className='App-body'>

@@ -17,9 +17,9 @@ verify that App renders a div with the class App-footer
 
 // })
 
-import React from 'react';
-import App from './App';
-import { shallow } from 'enzyme';
+import React from "react";
+import App from "./App";
+import { shallow } from "enzyme";
 
 describe("App Componeent Tests", () => {
 
