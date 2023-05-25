@@ -18,6 +18,9 @@ class Notifications extends Component {
     console.log(`Notification $${id} has been marked as read`)
   }
 
+  componentDidUpdate() {
+    console.log('Notifications rerendering ...')
+  }
   // the method is called by default every time the parent component re-renders (provide the re-render only on change optimization)
   shouldComponentUpdate(nextProps) {
     // re-render only if notificationsList grows... (nextProps is the props the component is about to render with)
