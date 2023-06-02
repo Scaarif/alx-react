@@ -5,7 +5,7 @@ const CourseListRow = ({isHeader=false, textFirstCell, textSecondCell=null}) => 
         background: '#deb5b545',
     }
     const trStyle = {
-        background: '#f5f5f5'
+        background: '#f5f5f5ab'
     }
 
   return (

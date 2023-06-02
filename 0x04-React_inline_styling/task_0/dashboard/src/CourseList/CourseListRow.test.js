@@ -29,8 +29,8 @@ test('CourseListRow renders correct style of <tr> when isHeader is false', () =>
     render(<CourseListRow textFirstCell="first" textSecondCell="second" />)
     const tr = screen.getByRole('row')
     const style = window.getComputedStyle(tr)
-    // expect(style.background).toBe('#f5f5f5')
-    expect(style.background).toBe('rgb(245, 245, 245)')
+    // expect(style.background).toBe('#f5f5f5ab')
+    expect(style.background).toBe('rgba(245, 245, 245, 0.671)')
 })
 
 test('CourseListRow renders correct style of <tr> when isHeader is true', () => {
