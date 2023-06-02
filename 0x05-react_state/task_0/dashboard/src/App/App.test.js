@@ -53,4 +53,25 @@ describe('App', () => {
         testAlert.mockRestore()
     })
 
+    
+    it('the default value of displayDrawer is false', () => {
+        // if displayDrawer is false, the notifications drawer is not displayed, only the <p>Your notifications</p> is
+       render(<App />)
+       expect(screen.queryByText('Here is the list of notifications')).not.toBeInTheDocument()
+       expect(screen.getByText('Your notifications')).toBeInTheDocument()
+    })
+
+    
+    it('calling handleDisplayDrawer changes state (displayDrawer) to true & handleHideDrawer to false', () => {
+        render(<App />)
+        const p = screen.getByText('Your notifications')
+        fireEvent.click(p)
+        // on click, displayDrawer is set to true (handleDisplayDrawer is called) and therefore the drawer is rendered
+        expect(screen.getByText('Here is the list of notifications')).toBeInTheDocument()
+        const btn = screen.getByText('x')
+        fireEvent.click(btn)
+        // on click, displayDrawer is set to false (handleHideDrawer is called) and therefore the drawer is un-rendered
+        expect(screen.queryByText('Here is the list of notifications')).not.toBeInTheDocument()
+    })
+
 })
