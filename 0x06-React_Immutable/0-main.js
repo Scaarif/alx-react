@@ -5,4 +5,6 @@ const obj = {
 	     wall: false,
 	     thing: -914767132
 };
-console.log(getImmutableObject(obj));
+console.log(getImmutableObject(obj))
+const map = getImmutableObject(obj);
+console.log(map + '\n' + map.get('smell'));
